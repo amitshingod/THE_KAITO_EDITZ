@@ -1,0 +1,6 @@
+{
+  "name": "THE_KAITO_EDITZ Portfolio",
+  "description": "Ultra-premium YouTube portfolio and fan hub for THE_KAITO_EDITZ. Featuring anime/gaming edits, interactive stats tracker, commissions, edit showcase, community wall, and a custom audio visualizer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

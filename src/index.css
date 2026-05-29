@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-display: "Orbitron", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --animate-glitch: glitch 1.5s infinite;
+  --animate-pulse-glow: pulse-glow 2s infinite alternate;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0) }
+  20% { transform: translate(-2px, 2px) }
+  40% { transform: translate(-2px, -2px) }
+  60% { transform: translate(2px, 2px) }
+  80% { transform: translate(2px, -2px) }
+  100% { transform: translate(0) }
+}
+
+@keyframes pulse-glow {
+  0% { text-shadow: 0 0 4px rgba(6, 182, 212, 0.4), 0 0 10px rgba(6, 182, 212, 0.2); }
+  100% { text-shadow: 0 0 12px rgba(6, 182, 212, 0.8), 0 0 20px rgba(6, 182, 212, 0.4); }
+}
+
+/* Custom glowing effects and classes */
+.neon-border-cyan {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2), inset 0 0 15px rgba(6, 182, 212, 0.1);
+}
+
+.neon-border-pink {
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.2), inset 0 0 15px rgba(236, 72, 153, 0.1);
+}
+
+.neon-border-purple {
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.2), inset 0 0 15px rgba(139, 92, 246, 0.1);
+}
+
+.neon-text-cyan {
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+}
+
+.neon-text-pink {
+  text-shadow: 0 0 8px rgba(236, 72, 153, 0.6);
+}
+
+.neon-text-purple {
+  text-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+}
+
+/* Hide default cursor only when custom cursor is active on non-touch devices */
+@media (min-width: 1024px) {
+  .custom-cursor-active, .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* Scrollbar customizations */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b; /* zinc-950 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a; /* zinc-800 */
+  border-radius: 4px;
+  border: 2px solid #09090b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4; /* cyan glow state */
+  box-shadow: 0 0 10px #06b6d4;
+}
+
+/* Base resets and defaults */
+body {
+  background-color: #030712; /* zinc-950/gray-950 */
+  color: #f4f4f5; /* zinc-100 */
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
